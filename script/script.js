@@ -69,7 +69,6 @@ function setCommitsCustom(res){
     });
     
     app.objects.push(myObjects);
-    console.log(myObjects)
 }
 
 function getDatas(theUrl, callback)

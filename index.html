@@ -8,47 +8,44 @@
 </head>
 <body onload="onload();">
     <h1 id="titre">Application Github Ynov</h1> 
-    <div id="acc">
-        <header>
-            
-            <!--
-                <img src="images/logo.png" alt="logo de mon site" title="mon logo"/>
-            -->
-                        
-            
-            <div class="col-5 ">Compte
-                <select class="form-control" v-model="selected_account">
-                    <option v-for="account in accounts"> {{ account }} </option>
-                </select>
-            </div>
+    <div id="acc" class="container">
+        <div class="row">
+                <!--
+                    <img src="images/logo.png" alt="logo de mon site" title="mon logo"/>
+                -->
+                            
+                
+                <div class="col-sm-10 col-md-5">Compte
+                    <select class="form-control" v-model="selected_account">
+                        <option v-for="account in accounts"> {{ account }} </option>
+                    </select>
+                </div>
 
-            <div class="form-check col-2">
-                <div>All</div>
-                <input type="checkbox" class="form-check-input" v-model="all">
-            </div>
-            
-            <div class="col-5">Projet
-                <select class="form-control" v-model="selected_project">
-                    <option v-for="project in projects"> {{ project }} </option>
-                </select>
-            </div>
-            <!--
-                <div class="col-4">Période</div>
-            -->
-        </header>
+                <div class="form-check col-sm-2 col-md-2">
+                    <div>All</div>
+                    <input type="checkbox" class="form-check-input" v-model="all">
+                </div>
+                
+                <div class="col-sm-12 col-md-5">Projet
+                    <select class="form-control" v-model="selected_project">
+                        <option v-for="project in projects"> {{ project }} </option>
+                    </select>
+                </div>
+                <!--
+                    <div class="col-4">Période</div>
+                -->
+        </div>
 
-        <header>
-            
-            <div class="col-6">
-                <label for="example-date-input" class="col-form-label">Date min</label>
-                    <input class="form-control" type="date" v-model="date1"  id="date1">
-            </div>
-            <div class="col-6">
-                <label for="example-date-input" class="col-form-label">Date max</label>
-                    <input class="form-control" type="date" v-model="date2"  id="date2">
-            </div>
-
-        </header>
+        <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <label for="example-date-input" class="col-form-label">Date min</label>
+                        <input class="form-control" type="date" v-model="date1"  id="date1">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <label for="example-date-input" class="col-form-label">Date max</label>
+                        <input class="form-control" type="date" v-model="date2"  id="date2">
+                </div>
+         </div>
 
         <header style="margin-top:20px">
             <button type="button" class="btn btn-primary" v-on:click="call">Primary</button>
